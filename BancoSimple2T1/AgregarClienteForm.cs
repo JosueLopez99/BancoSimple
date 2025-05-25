@@ -13,17 +13,27 @@ namespace BancoSimple2T1
 {
     public partial class AgregarClienteForm : Form
     {
-        public Cliente NuevoCliente { get; private set; }
+        public ClienteService clienteservice;
         public AgregarClienteForm()
         {
             InitializeComponent();
+            clienteservice = new ClienteService();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            
-            decimal ir = 0.15M;
-            MessageBox.Show("IR: " + ir);
+
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtIdentificacion.Text))
+            {
+                MessageBox.Show("Algun Campo esta vacio rellenelo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                clienteservice.AgregarCliente(txtNombre.Text, txtIdentificacion.Text);
+                MessageBox.Show("El cliente fue agregado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
+                Close();
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

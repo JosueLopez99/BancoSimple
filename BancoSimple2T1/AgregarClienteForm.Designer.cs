@@ -28,77 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            txtNombre = new TextBox();
+            btnCancelar = new Button();
             btnAceptar = new Button();
             txtIdentificacion = new TextBox();
+            label1 = new Label();
+            txtNombre = new TextBox();
             label2 = new Label();
-            btnCancelar = new Button();
             SuspendLayout();
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Cyan;
+            btnCancelar.Location = new Point(266, 131);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(109, 36);
+            btnCancelar.TabIndex = 25;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnAceptar
+            // 
+            btnAceptar.BackColor = Color.Cyan;
+            btnAceptar.Location = new Point(42, 131);
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.Size = new Size(106, 36);
+            btnAceptar.TabIndex = 24;
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.UseVisualStyleBackColor = false;
+            // 
+            // txtIdentificacion
+            // 
+            txtIdentificacion.Location = new Point(218, 75);
+            txtIdentificacion.Name = "txtIdentificacion";
+            txtIdentificacion.Size = new Size(125, 27);
+            txtIdentificacion.TabIndex = 23;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 13);
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(42, 74);
             label1.Name = "label1";
-            label1.Size = new Size(64, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Nombre";
+            label1.Size = new Size(134, 25);
+            label1.TabIndex = 22;
+            label1.Text = "Identificacion:";
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(172, 10);
+            txtNombre.Location = new Point(218, 29);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(173, 27);
-            txtNombre.TabIndex = 1;
-            // 
-            // btnAceptar
-            // 
-            btnAceptar.Location = new Point(47, 113);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(112, 50);
-            btnAceptar.TabIndex = 2;
-            btnAceptar.Text = "Aceptar";
-            btnAceptar.UseVisualStyleBackColor = true;
-            btnAceptar.Click += btnAceptar_Click;
-            // 
-            // txtIdentificacion
-            // 
-            txtIdentificacion.Location = new Point(172, 72);
-            txtIdentificacion.Name = "txtIdentificacion";
-            txtIdentificacion.Size = new Size(173, 27);
-            txtIdentificacion.TabIndex = 4;
+            txtNombre.Size = new Size(125, 27);
+            txtNombre.TabIndex = 21;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 72);
+            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(42, 29);
             label2.Name = "label2";
-            label2.Size = new Size(99, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Identificacion";
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(367, 113);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(112, 50);
-            btnCancelar.TabIndex = 5;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
+            label2.Size = new Size(86, 25);
+            label2.TabIndex = 20;
+            label2.Text = "Nombre:";
             // 
             // AgregarClienteForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(631, 187);
+            BackColor = Color.FromArgb(128, 128, 255);
+            ClientSize = new Size(428, 230);
             Controls.Add(btnCancelar);
-            Controls.Add(txtIdentificacion);
-            Controls.Add(label2);
             Controls.Add(btnAceptar);
-            Controls.Add(txtNombre);
+            Controls.Add(txtIdentificacion);
             Controls.Add(label1);
+            Controls.Add(txtNombre);
+            Controls.Add(label2);
             Name = "AgregarClienteForm";
             Text = "Form2";
             ResumeLayout(false);
@@ -107,11 +110,11 @@
 
         #endregion
 
-        private Label label1;
-        private TextBox txtNombre;
+        private Button btnCancelar;
         private Button btnAceptar;
         private TextBox txtIdentificacion;
+        private Label label1;
+        private TextBox txtNombre;
         private Label label2;
-        private Button btnCancelar;
     }
 }

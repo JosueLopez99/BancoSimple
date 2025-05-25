@@ -28,79 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            txtNumeroCuenta = new TextBox();
-            numSaldoInicial = new NumericUpDown();
+            btnCancelar = new Button();
             btnAceptar = new Button();
-            ((System.ComponentModel.ISupportInitialize)numSaldoInicial).BeginInit();
+            txtSaldo = new TextBox();
+            label1 = new Label();
+            txtNumeroCuenta = new TextBox();
+            label2 = new Label();
             SuspendLayout();
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Cyan;
+            btnCancelar.Location = new Point(267, 125);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(109, 36);
+            btnCancelar.TabIndex = 31;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // btnAceptar
+            // 
+            btnAceptar.BackColor = Color.Cyan;
+            btnAceptar.Location = new Point(60, 125);
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.Size = new Size(106, 36);
+            btnAceptar.TabIndex = 30;
+            btnAceptar.Text = "Aceptar";
+            btnAceptar.UseVisualStyleBackColor = false;
+            // 
+            // txtSaldo
+            // 
+            txtSaldo.Location = new Point(236, 69);
+            txtSaldo.Name = "txtSaldo";
+            txtSaldo.Size = new Size(125, 27);
+            txtSaldo.TabIndex = 29;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(8, 26);
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(60, 69);
             label1.Name = "label1";
-            label1.Size = new Size(132, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Numero de cuenta";
+            label1.Size = new Size(64, 25);
+            label1.TabIndex = 28;
+            label1.Text = "Saldo:";
+            // 
+            // txtNumeroCuenta
+            // 
+            txtNumeroCuenta.Location = new Point(236, 23);
+            txtNumeroCuenta.Name = "txtNumeroCuenta";
+            txtNumeroCuenta.Size = new Size(125, 27);
+            txtNumeroCuenta.TabIndex = 27;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(8, 74);
+            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(60, 23);
             label2.Name = "label2";
-            label2.Size = new Size(90, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Saldo Inicial";
-            // 
-            // txtNumeroCuenta
-            // 
-            txtNumeroCuenta.Location = new Point(249, 26);
-            txtNumeroCuenta.Name = "txtNumeroCuenta";
-            txtNumeroCuenta.Size = new Size(140, 27);
-            txtNumeroCuenta.TabIndex = 2;
-            // 
-            // numSaldoInicial
-            // 
-            numSaldoInicial.Location = new Point(250, 83);
-            numSaldoInicial.Name = "numSaldoInicial";
-            numSaldoInicial.Size = new Size(139, 27);
-            numSaldoInicial.TabIndex = 3;
-            // 
-            // btnAceptar
-            // 
-            btnAceptar.Location = new Point(125, 138);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(111, 36);
-            btnAceptar.TabIndex = 4;
-            btnAceptar.Text = "Aceptar";
-            btnAceptar.UseVisualStyleBackColor = true;
-            btnAceptar.Click += btnAceptar_Click;
+            label2.Size = new Size(146, 25);
+            label2.TabIndex = 26;
+            label2.Text = "NumeroCuenta:";
             // 
             // AgregarCuentaForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(453, 185);
+            Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
-            Controls.Add(numSaldoInicial);
+            Controls.Add(txtSaldo);
+            Controls.Add(label1);
             Controls.Add(txtNumeroCuenta);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "AgregarCuentaForm";
             Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)numSaldoInicial).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private TextBox txtNumeroCuenta;
-        private NumericUpDown numSaldoInicial;
+        private Button btnCancelar;
         private Button btnAceptar;
+        private TextBox txtSaldo;
+        private Label label1;
+        private TextBox txtNumeroCuenta;
+        private Label label2;
     }
 }
